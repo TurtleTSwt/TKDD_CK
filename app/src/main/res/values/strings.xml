@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Attendance App</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="student">Student</string>
+    <string name="teacher">Teacher</string>
+    <string name="logout">Logout</string>
+    <string name="scan_qr">Scan QR Code</string>
+    <string name="check_in">Check In</string>
+    <string name="history">History</string>
+    <string name="create_class">Create Class</string>
+    <string name="create_session">Create Session</string>
+</resources>
