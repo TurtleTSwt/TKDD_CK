@@ -24,7 +24,7 @@
 
         <!-- Login Activity (Launcher) -->
         <activity
-            android:name=".presentation.ui.LoginActivity"
+            android:name=".presentation.ui.auth.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.AttendanceApp.NoActionBar">
             <intent-filter>
@@ -35,45 +35,55 @@
 
         <!-- Register Activity -->
         <activity
-            android:name=".presentation.ui.RegisterActivity"
+            android:name=".presentation.ui.auth.RegisterActivity"
             android:exported="false"
             android:theme="@style/Theme.AttendanceApp.NoActionBar" />
 
         <!-- Student Activities -->
         <activity
-            android:name=".presentation.ui.StudentMainActivity"
+            android:name=".presentation.ui.student.StudentMainActivity"
             android:exported="false" />
 
         <activity
-            android:name=".presentation.ui.QRScannerActivity"
+            android:name=".presentation.ui.scanner.QRScannerActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".presentation.ui.CheckInActivity"
-            android:exported="false" />
+            android:name=".presentation.ui.checkin.CheckInActivity"
+            android:exported="false"
+            tools:ignore="MissingClass" />
 
         <activity
-            android:name=".presentation.ui.AttendanceHistoryActivity"
+            android:name=".presentation.ui.history.AttendanceHistoryActivity"
             android:exported="false" />
 
         <!-- Teacher Activities -->
         <activity
-            android:name=".presentation.ui.TeacherMainActivity"
+            android:name=".presentation.ui.teacher.TeacherMainActivity"
             android:exported="false" />
 
         <activity
-            android:name=".presentation.ui.CreateClassActivity"
+            android:name=".presentation.ui.teacher.CreateClassActivity"
             android:exported="false" />
 
         <activity
-            android:name=".presentation.ui.CreateSessionActivity"
+            android:name=".presentation.ui.teacher.CreateSessionActivity"
+            android:exported="false" />
+
+        <!-- GPS Test Activity -->
+        <activity
+            android:name=".presentation.ui.gps.GPSTestActivity"
+            android:exported="false" />
+
+        <!-- View QR Code Activity -->
+        <activity
+            android:name=".presentation.ui.viewQR.ViewQRCodeActivity"
             android:exported="false" />
 
         <!-- ZXing Capture Activity -->
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
-            android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
 
     </application>

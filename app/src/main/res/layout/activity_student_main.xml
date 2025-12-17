@@ -17,7 +17,7 @@
                 android:id="@+id/tvWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome"
+                android:text="Chào mừng"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -37,20 +37,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
-            android:text="Scan QR"/>
+            android:text="Quét QR"/>
 
         <Button
             android:id="@+id/btnHistory"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="History"/>
+            android:text="Lịch sử"/>
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Active Sessions"
+        android:text="Các lớp đang hoạt động"
         android:textSize="18sp"
         android:textStyle="bold"
         android:padding="16dp"/>
@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Logout"
+        android:text="Đăng xuất"
         style="@style/Widget.Material3.Button.OutlinedButton"/>
 
 </LinearLayout>

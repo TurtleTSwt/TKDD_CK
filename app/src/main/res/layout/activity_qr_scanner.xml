@@ -17,7 +17,7 @@
         android:layout_marginTop="32dp"
         android:background="#80000000"
         android:padding="16dp"
-        android:text="Scan QR Code to Check In"
+        android:text="Quét mã QR để điểm danh"
         android:textColor="@android:color/white"
         android:textSize="16sp"/>
 

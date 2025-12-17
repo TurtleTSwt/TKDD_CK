@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Check In"
+        android:text="Check-In"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp"/>
@@ -28,7 +28,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Class:"
+                android:text="Lớp:"
                 android:textSize="14sp"
                 android:textColor="@android:color/darker_gray"/>
 
@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Session Time:"
+                android:text="Thời gian:"
                 android:textSize="14sp"
                 android:textColor="@android:color/darker_gray"/>
 
@@ -59,7 +59,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your Location:"
+                android:text="Địa điểm:"
                 android:textSize="14sp"
                 android:textColor="@android:color/darker_gray"/>
 
@@ -67,7 +67,7 @@
                 android:id="@+id/tvLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Getting location..."
+                android:text="Đang lấy vị trí..."
                 android:textSize="14sp"/>
 
         </LinearLayout>
@@ -77,6 +77,6 @@
         android:id="@+id/btnCheckIn"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:text="Check In Now"/>
+        android:text="Thực hiện điểm danh"/>
 
 </LinearLayout>

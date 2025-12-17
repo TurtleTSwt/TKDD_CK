@@ -1,4 +1,3 @@
-// presentation/ui/TeacherMainActivity.java
 package com.example.tbdd_cki.presentation.ui.teacher;
 
 import android.content.Intent;
@@ -10,9 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.attendance.app.R;
+import com.example.tbdd_cki.R;
 import com.example.tbdd_cki.data.repository.UserRepositoryImpl;
 import com.example.tbdd_cki.domain.repository.UserRepository;
+import com.example.tbdd_cki.presentation.ui.auth.LoginActivity;
+
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 

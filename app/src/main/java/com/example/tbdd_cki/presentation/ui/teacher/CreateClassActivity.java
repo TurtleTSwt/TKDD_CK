@@ -1,13 +1,25 @@
 package com.example.tbdd_cki.presentation.ui.teacher;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.attendance.app.R;
+import androidx.core.app.ActivityCompat;
+
+import com.example.tbdd_cki.R;
 import com.example.tbdd_cki.data.source.local.database.AppDatabase ;
 import com.example.tbdd_cki.data.source.local.database.entity.ClassEntity ;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
+
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
@@ -19,13 +31,19 @@ public class CreateClassActivity extends AppCompatActivity {
     private Button btnCreateClass;
     private AppDatabase database;
     private CompositeDisposable disposables = new CompositeDisposable();
+    private Button btnUseCurrentLocation;
+    private FusedLocationProviderClient fusedLocationClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_class);
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        btnUseCurrentLocation = findViewById(R.id.btnUseCurrentLocation);
+        btnUseCurrentLocation.setOnClickListener(v -> useCurrentLocation());
 
         database = AppDatabase.getInstance(this);
+
 
         initViews();
     }
@@ -92,6 +110,38 @@ public class CreateClassActivity extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
                         })
         );
+    }
+    private void useCurrentLocation() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 103);
+            return;
+        }
+
+        Toast.makeText(this, "Getting your location...", Toast.LENGTH_SHORT).show();
+
+        LocationRequest locationRequest = new LocationRequest.Builder(
+                Priority.PRIORITY_HIGH_ACCURACY, 1000)
+                .setMaxUpdates(1)
+                .build();
+
+        fusedLocationClient.requestLocationUpdates(locationRequest,
+                new LocationCallback() {
+                    @Override
+                    public void onLocationResult(LocationResult locationResult) {
+                        if (locationResult != null && locationResult.getLastLocation() != null) {
+                            Location location = locationResult.getLastLocation();
+                            etLatitude.setText(String.valueOf(location.getLatitude()));
+                            etLongitude.setText(String.valueOf(location.getLongitude()));
+                            Toast.makeText(CreateClassActivity.this,
+                                    "Location set successfully!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(CreateClassActivity.this,
+                                    "Failed to get location", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }, null);
     }
 
     @Override

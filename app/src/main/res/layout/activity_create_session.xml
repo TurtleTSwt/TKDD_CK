@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create Attendance Session"
+            android:text="Tạo QR"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="32dp"/>
@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Class:"
+            android:text="Chọn lớp:"
             android:textSize="16sp"
             android:layout_marginBottom="8dp"/>
 
@@ -39,7 +39,7 @@
                 android:id="@+id/etSessionTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Session Time (HH:mm)"
+                android:hint="Thời hạn"
                 android:inputType="time"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,7 +52,7 @@
                 android:id="@+id/etQRExpiration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="QR Expiration (minutes)"
+                android:hint="Thời gian QR hết hạn (phút)"
                 android:inputType="number"
                 android:text="5"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -61,7 +61,7 @@
             android:id="@+id/btnCreateSession"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Create Session"/>
+            android:text="Tạo mã"/>
 
         <TextView
             android:id="@+id/tvQRCode"
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="24dp"
-            android:text="QR Code will appear here"
+            android:text="Mã QR của bạn:"
             android:textSize="14sp"
             android:textColor="@android:color/darker_gray"/>
 

@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.attendance.app.R;
+import com.example.tbdd_cki.R;
 import com.example.tbdd_cki.domain.model.AttendanceSession;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -30,7 +30,7 @@ public class SessionAdapter extends RecyclerView.Adapter<SessionAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-            .inflate(R.layout.item_session, parent, false);
+                .inflate(R.layout.item_session, parent, false);
         return new ViewHolder(view);
     }
 
@@ -64,7 +64,7 @@ public class SessionAdapter extends RecyclerView.Adapter<SessionAdapter.ViewHold
             tvClassName.setText(session.getClassName());
             tvSessionTime.setText(dateFormat.format(session.getSessionDate()) + " - " + session.getSessionTime());
             tvStatus.setText(session.getStatus().name());
-            
+
             itemView.setOnClickListener(v -> {
                 if (listener != null) {
                     listener.onSessionClick(session);

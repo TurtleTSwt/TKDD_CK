@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.attendance.app'
+    namespace 'com.example.tbdd_cki'
     compileSdk 36
 
     defaultConfig {

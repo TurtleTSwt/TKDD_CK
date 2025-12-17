@@ -17,7 +17,7 @@
                 android:id="@+id/tvWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Teacher Dashboard"
+                android:text="Giao diện giáo viên"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -36,20 +36,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
-            android:text="Create Class"/>
+            android:text="Tạo lớp học"/>
 
         <Button
             android:id="@+id/btnCreateSession"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="New Session"/>
+            android:text="Tạo mã"/>
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Classes"
+        android:text="Lớp của tôi"
         android:textSize="18sp"
         android:textStyle="bold"
         android:padding="16dp"/>
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Logout"
+        android:text="Đăng xuất"
         style="@style/Widget.Material3.Button.OutlinedButton"/>
 
 </LinearLayout>

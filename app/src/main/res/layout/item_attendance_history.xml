@@ -18,7 +18,7 @@
             android:id="@+id/tvSessionInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Session Info"
+            android:text="Các mã hoạt động"
             android:textSize="16sp"
             android:textStyle="bold"/>
 
@@ -26,7 +26,7 @@
             android:id="@+id/tvAttendanceTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Time"
+            android:text="Thời gian"
             android:textSize="14sp"
             android:layout_marginTop="4dp"/>
 
@@ -41,7 +41,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Status"
+                android:text="Trạng thái"
                 android:textSize="14sp"
                 android:textStyle="bold"/>
 
@@ -49,7 +49,7 @@
                 android:id="@+id/tvMethod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Method"
+                android:text="Phương thức"
                 android:textSize="12sp"
                 android:textColor="@android:color/darker_gray"/>
         </LinearLayout>

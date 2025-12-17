@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-import com.attendance.app.R;
+import com.example.tbdd_cki.R;
 import com.example.tbdd_cki.data.repository.AttendanceRepositoryImpl;
 import com.example.tbdd_cki.data.repository.UserRepositoryImpl;
 import com.example.tbdd_cki.domain.repository.AttendanceRepository;

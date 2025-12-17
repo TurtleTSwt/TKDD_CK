@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create New Class"
+            android:text="Tạo lớp học"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="32dp"/>
@@ -26,7 +26,7 @@
                 android:id="@+id/etClassCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Class Code (e.g., CS101)"/>
+                android:hint="Mã lớp học (vd:23015..,..)"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -38,7 +38,7 @@
                 android:id="@+id/etClassName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Class Name"/>
+                android:hint="Tên lớp học (vd:B111,..)"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -50,7 +50,7 @@
                 android:id="@+id/etSubjectName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Subject Name"/>
+                android:hint="Tên môn học (vd:Lập trình di động,..)"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -62,7 +62,7 @@
                 android:id="@+id/etSemester"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Semester (e.g., Fall 2024)"/>
+                android:hint="Học kì (vd:Học kỳ 1,..)"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -74,15 +74,23 @@
                 android:id="@+id/etYear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Academic Year (e.g., 2024-2025)"/>
+                android:hint="Năm học (vd:2023,..)"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Location Settings (Optional)"
+            android:text="Vị trí"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnUseCurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sử dụng vị trí hiện tại"
+            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_marginBottom="16dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -94,7 +102,6 @@
                 android:id="@+id/etLatitude"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Latitude"
                 android:inputType="numberDecimal|numberSigned"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,7 +114,6 @@
                 android:id="@+id/etLongitude"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Longitude"
                 android:inputType="numberDecimal|numberSigned"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,7 +126,7 @@
                 android:id="@+id/etRadius"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Allowed Radius (meters)"
+                android:hint="Khoảng cách cho phép điểm danh (mét)"
                 android:inputType="number"
                 android:text="50"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -133,10 +139,3 @@
 
     </LinearLayout>
 </ScrollView>
-
-
-
-
-
-
-
