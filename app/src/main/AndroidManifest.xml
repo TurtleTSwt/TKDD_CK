@@ -51,8 +51,7 @@
 
         <activity
             android:name=".presentation.ui.checkin.CheckInActivity"
-            android:exported="false"
-            tools:ignore="MissingClass" />
+            android:exported="false" />
 
         <activity
             android:name=".presentation.ui.history.AttendanceHistoryActivity"
@@ -84,8 +83,8 @@
         <!-- ZXing Capture Activity -->
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
-
     </application>
 
 </manifest>
